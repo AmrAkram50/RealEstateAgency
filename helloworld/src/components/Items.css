@@ -1,0 +1,8 @@
+.item:nth-of-type(even){
+    background: #222;
+    color: #fff;
+}
+.item:nth-of-type(odd){
+    background: #154;
+    color: #fff;
+}
