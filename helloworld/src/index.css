@@ -19,7 +19,7 @@ div{
 
 .navBar{
   overflow: hidden;
-  background: #080;
+  background: #0A0;
   color: #fff;
 }
 
@@ -48,4 +48,16 @@ ul a{
   text-decoration: none;
   color: #fff;
   margin: 0 15px;
+}
+
+.content{
+  background: #eee;
+  border: 1px solid #ddd;
+  margin: 15px;
+  padding: 15px;
+}
+
+.img{
+  width: 400px;
+  height: 400px;
 }

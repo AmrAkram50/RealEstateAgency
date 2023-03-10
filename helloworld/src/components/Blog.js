@@ -8,6 +8,7 @@ class Blog extends Component {
     }
 
     componentDidMount(){
+        console.log(this.props);
         axios.get("https://jsonplaceholder.typicode.com/users")
         .then(res => {
             this.setState({
@@ -18,12 +19,23 @@ class Blog extends Component {
     }
 
     render(){
+        const {users} = this.state;
+        const usersList = users.map(user =>{
+            return(
+                <div key={user.id}>
+                    <div className="content">
+                        <div>Name : {user.name}</div>
+                        <div>Username : {user.username}</div>
+                    </div>
+                </div>
+            )
+        });
         return(
             <div>
                 <h2>Blog</h2>
                 <p>This is Blog section</p>
                 <div>
-                    {this.state.users.map(user => <div>{user.name} and username is {user.username}</div>)}
+                    {usersList}
                 </div>
             </div>
         );
